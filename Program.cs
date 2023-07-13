@@ -92,7 +92,7 @@ namespace Sysne.Banco
                                     WriteLine("1: Depocitar\n2: Retirar\n3: Consular\n0: Salir");
                                     var accionMiCuenta = ReadLine();
                                     if (accionMiCuenta == null || !IsNumero(accionMiCuenta))
-                                        WriteLine("Accion no validaa");
+                                        WriteLine("Accion no valida");
                                     else
                                     {
                                         if (accionMiCuenta == "0")
