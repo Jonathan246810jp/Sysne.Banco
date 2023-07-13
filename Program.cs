@@ -89,7 +89,7 @@ namespace Sysne.Banco
                                 while (true)
                                 {
                                     WriteLine("Banco del bienestar (Mi cuenta) \n--------------------------------");
-                                    WriteLine("1: Depocitar\n2: Retirar\n3: Consular\n4: Retirar\n0: Salir");
+                                    WriteLine("1: Depocitar\n2: Retirar\n3: Consular\n4: Retirar\n4: consultar\n0: Salir");
                                     var accionMiCuenta = ReadLine();
                                     if (accionMiCuenta == null || !IsNumero(accionMiCuenta))
                                         WriteLine("Accion no valida");
