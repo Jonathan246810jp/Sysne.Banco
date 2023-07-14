@@ -10,7 +10,7 @@ namespace Sysne.Banco.Class
     {
         private List<Cliente> Clientes = new List<Cliente>();
         private int Identificador = 0;
-        #region agregar cliente
+        #region Metodos del banco
         /// <summary>
         /// Método que se encarga de ragregar un nuevo cliente.
         /// </summary>
@@ -33,9 +33,9 @@ namespace Sysne.Banco.Class
             Clientes.Add(cliente);
             return (true, "Cliente registrado");
         }
-        #endregion|
+       
 
-        #region Metodo que accede a la cuenta del cliente
+      
         /// <summary>
         /// Metodo que permite acceder a la cuenta del cliente mediante el nip y l numero de cuenta
         /// </summary>
@@ -53,9 +53,9 @@ namespace Sysne.Banco.Class
             return ((true, "Acceso correcto"), (cuentaExiste.Id, cuentaExiste.Cuenta.Saldo));
         }
 
-        #endregion
+      
         
-        #region Metodo para Depositar saldo
+       
         /// <summary>
         /// Metodo para depositar a la cuenta del cliente 
         /// </summary>
@@ -73,9 +73,9 @@ namespace Sysne.Banco.Class
             }
             return (false, "La cuenta no existe");
         }
-        #endregion
+        
 
-        #region Metodo para Retirar saldo
+       
         /// <summary>
         /// Metodo  que dismunuyee al saldo
         /// </summary>
@@ -97,9 +97,9 @@ namespace Sysne.Banco.Class
             return (false, "La cuenta no existe");
         }
 
-        #endregion
+        
 
-        #region Consultar saldo
+        
         public double ConsultarSaldo(int idCliente)
         {
             var clienteTmp = Clientes.FirstOrDefault(c => c.Id == idCliente);
@@ -109,14 +109,10 @@ namespace Sysne.Banco.Class
             }
             return 0;
         }
-        #endregion
 
-        #region función anónima que devuelve el número de clientes registrdos 
-        public int ObtenerNumeroDeClientesRegistrados() =>
+         public int ObtenerNumeroDeClientesRegistrados() =>
              Clientes.Count();
-        #endregion
-
-        #region Validaciones 
+       
         private bool ValidarSaldo(double saldoRetiro, double saldoActual)
         {
             if (saldoRetiro <= saldoActual)

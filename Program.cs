@@ -77,9 +77,8 @@ namespace Sysne.Banco
                             int numeroCuenta = int.Parse(ReadLine());
                             WriteLine("NIP");
                             int nip = int.Parse(ReadLine());
-
-
                             ((bool operacion, string menssage), (int id, double saldo)) acceso = operaciones.AccederCuenta(nip, numeroCuenta);
+          
 
                             if (acceso.Item1.operacion)
                             {
@@ -120,9 +119,6 @@ namespace Sysne.Banco
                                                 WriteLine(resultRetiro.mensaje);
                                                 break;
                                             case "3":
-                                                WriteLine($"Tu saldo actual es: {operaciones.ConsultarSaldo(idCliente)}\n--------------------");
-                                                break;
-                                            case "4":
                                                 WriteLine($"Tu saldo actual es: {operaciones.ConsultarSaldo(idCliente)}\n--------------------");
                                                 break;
                                             default:

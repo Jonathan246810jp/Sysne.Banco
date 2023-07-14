@@ -15,6 +15,4 @@ namespace Sysne.Banco.Class
         public double Saldo { get; set; }
         public DateTime FechaModificacion { get; set; }       
     }
-
-    
 }

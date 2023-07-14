@@ -9,7 +9,7 @@ namespace Sysne.Banco.Class
     public class Cliente
     {
      /// <summary>
-     /// propiedades para el encapsulamiento de los datos del cliente
+     /// modelo
      /// </summary>
      
         
